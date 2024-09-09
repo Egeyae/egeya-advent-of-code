@@ -8,8 +8,9 @@ def get_input():
         for j in x:
             if j:
                 to_return[-1].append(int(j))
-    
+
     return to_return
+
 
 def get_input_2():
     in_ = get_input()
@@ -20,9 +21,11 @@ def get_input_2():
         for k in range(3):
             to_return.append([])
             for j in range(3):
-                to_return[-1].append(in_[i+j][k])
+                to_return[-1].append(in_[i + j][k])
     print(to_return)
     return to_return
+
+
 def part_1():
     input_ = get_input()
     poss = 0
@@ -35,8 +38,9 @@ def part_1():
                 s += t[i]
         if t[maxi] < s:
             poss += 1
-    
+
     print(f"Total = {poss}")
+
 
 def part_2():
     input_ = get_input_2()
@@ -50,7 +54,8 @@ def part_2():
                 s += t[i]
         if t[maxi] < s:
             poss += 1
-    
+
     print(f"Total = {poss}")
+
 
 part_2()

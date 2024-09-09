@@ -3,6 +3,7 @@ def get_input():
         in_ = f.readlines()
     return in_
 
+
 def process_command(l, x, y):
     if l == "U":
         y -= 1
@@ -14,19 +15,21 @@ def process_command(l, x, y):
         x -= 1
     else:
         raise Exception(f"Wrong input: {l}")
-    
+
     return x, y
+
 
 def process_line(line, x, y):
     for char in line.strip():
         # print(char, end=" ")
         x, y = process_command(char, x, y)
-        
+
         x = max(min(x, 2), 0)
         y = max(min(y, 2), 0)
         # print(x, y, end=" || ")
     # print()
     return x, y
+
 
 def get_num(x, y):
     nums = [
@@ -35,6 +38,7 @@ def get_num(x, y):
         [7, 8, 9]
     ]
     return nums[y][x]
+
 
 def part_1():
     in_ = get_input()
@@ -46,6 +50,7 @@ def part_1():
         password += str(get_num(x, y))
 
     print(f"The password is: {password}")
+
 
 def part_2():
     in_ = get_input()
@@ -68,7 +73,8 @@ def part_2():
             if keypad[ny][nx] != 0:
                 x, y = nx, ny
         password += str(keypad[y][x])
-    
+
     print(f"The password is: {password}")
+
 
 part_2()

@@ -5,11 +5,12 @@ def get_input():
     l = [[] for _ in range(size)]
 
     for line in in_:
-        line=line.strip()
+        line = line.strip()
         for i in range(size):
             l[i].append(line[i])
-    
+
     return l
+
 
 def count_letters(col):
     to_return = {}
@@ -20,6 +21,7 @@ def count_letters(col):
             to_return[c] = 1
     return to_return.items()
 
+
 def part_1():
     in_ = get_input()
 
@@ -29,8 +31,9 @@ def part_1():
         letters = count_letters(col)
         max_letter = sorted(letters, key=lambda x: x[1], reverse=True)[0][0]
         message += max_letter
-    
+
     print(message)
+
 
 def part_2():
     in_ = get_input()
@@ -41,7 +44,8 @@ def part_2():
         letters = count_letters(col)
         max_letter = sorted(letters, key=lambda x: x[1])[0][0]
         message += max_letter
-    
+
     print(message)
+
 
 part_2()
