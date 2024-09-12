@@ -42,4 +42,4 @@ def part_2():
     print("".join([str(x) for x in password]))
 
 
-part_1()
+part_2()

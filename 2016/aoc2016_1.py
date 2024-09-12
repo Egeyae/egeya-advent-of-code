@@ -4,7 +4,7 @@ def get_input():
 
     i = i.split(", ")
     return i
-
+                                                                                                                                                    
 
 def switch_dir(curr, side):
     if side == "R":
