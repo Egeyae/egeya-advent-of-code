@@ -10,14 +10,12 @@ def part_1():
     total = 0
 
     for report in get_input_yield():
-        #print(report)
         if report[0] > report[1]:
             comparison = lambda a, b: a > b
         else:
             comparison = lambda a, b: a < b
 
         for i in range(0, len(report) - 1):
-            #print(comparison(report[i], report[i + 1]), abs(report[i + 1] - report[i]))
             if comparison(report[i], report[i + 1]) and (1 <= abs(report[i + 1] - report[i]) <= 3):
                 if i == len(report) - 2:
                     total += 1
